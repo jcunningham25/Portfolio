@@ -186,8 +186,10 @@ img {
 
 .crane-image {
     width: 200px;
-    height: auto;          /* Maintains aspect ratio */
-    border: 2px solid #000; /* Additional styling */
+    height: 200px;       /* Sets both width and height to 200px */
+    object-fit: cover;   /* Crops the image to fill the container */
+    display: block; /* Removes inline spacing issues */
+    margin: 1rem 0; /* Adds spacing around images */
 }
 
 
