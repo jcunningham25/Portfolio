@@ -153,13 +153,26 @@ img {
     margin: 1rem 0;      /* Adds spacing around images */
 }
 
+/* Square Image Styling */
 .square-image {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    display: block;
-    margin: 1rem 0;
+    width: 200px;               /* Fixed width */
+    height: 200px;              /* Fixed height to make it square */
+    object-fit: cover;          /* Ensures the image covers the container without distortion */
+    border: 2px solid #000;     /* Optional: Adds a border around the image */
+    display: block;             /* Removes any inline spacing issues */
+    margin: 1rem 0;             /* Adds spacing around the image */
+    border-radius: 5px;         /* Optional: Rounds the corners */
 }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .square-image {
+        width: 100%;           /* Makes the image responsive */
+        height: auto;          /* Allows height to adjust based on width */
+        max-width: 200px;      /* Prevents the image from becoming too large */
+    }
+}
+
 
 /* Specific Class for Project Images */
 .project-image {
