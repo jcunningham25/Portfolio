@@ -1,71 +1,51 @@
-  const projects = [
-    {
-      id: 1,
-      title: "Portfolio Website",
-      description: "A responsive personal portfolio website built with React and modern CSS",
-      technologies: ["React", "CSS3", "HTML5"],
-      longDescription: "A fully responsive portfolio website showcasing my work and skills. Features include dark mode, smooth animations, and a contact form.",
-      image: "/api/placeholder/400/400"
-    },
-    {
-      id: 2,
-      title: "Task Management App",
-      description: "A full-stack task management application with real-time updates",
-      technologies: ["Node.js", "MongoDB", "Express"],
-      longDescription: "Complete task management solution with user authentication, real-time updates, and team collaboration features.",
-      image: "/api/placeholder/400/400"
-    },
-    {
-      id: 3,
-      title: "E-commerce Platform",
-      description: "Modern e-commerce platform with payment integration",
-      technologies: ["React", "Stripe", "Firebase"],
-      longDescription: "Feature-rich e-commerce platform with secure payment processing, inventory management, and order tracking.",
-      image: "/api/placeholder/400/400"
-    }
-  ];
-
-  return (
-    <div>
-      <nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Joseph Cunningham</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#resume">Resume</a></li>
+            <li><a href="index.html#experience">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
-      </nav>
+    </nav>
 
-      <div className="hero">
+    <!-- Hero Section -->
+    <div class="hero">
         <h1>My Projects</h1>
-        <p>Explore my latest work and personal projects</p>
-      </div>
-
-      <div className="container">
-        <div className="projects">
-          {projects.map((project) => (
-            <div key={project.id} className="project-card">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="project-image"
-              />
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div className="section">
-                {project.technologies.map((tech, index) => (
-                  <span key={index} className="skill-card">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <button className="project-details-btn">
-                Learn More
-              </button>
-            </div>
-          ))}
-        </div>
-      </div>
+        <p>Explore the work I've done so far</p>
     </div>
-  );
-};
 
+    <!-- Projects Content -->
+    <div class="container">
+        <section class="section">
+            <h2>Projects</h2>
+            <div class="projects">
+                <!-- Project Card Example -->
+                <div class="project-card">
+                    <h3>Model Crane</h3>
+                    <p>Small controlled crane made using Arduino</p>
+                    <button class="project-details-btn" onclick="toggleDetails()">Learn More</button>
+                    <div id="model-crane-details" class="hidden">
+                        <img src="images/AngleFR.jpeg" alt="Project Angled from the Right" class="project-image square-image">
+                        <!-- Project Details Content -->
+                        <!-- ... (Copy the project details from your main HTML or expand as needed) -->
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
