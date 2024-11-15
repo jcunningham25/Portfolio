@@ -149,8 +149,8 @@ img {
     width: 200px;
     height: 200px;       /* Sets both width and height to 200px */
     object-fit: cover;   /* Crops the image to fill the container */
-    display: block; /* Removes inline spacing issues */
-    margin: 1rem 0; /* Adds spacing around images */
+    display: block;      /* Removes inline spacing issues */
+    margin: 1rem 0;      /* Adds spacing around images */
 }
 
 /* Specific Class for Project Images */
@@ -183,15 +183,6 @@ img {
     margin: 0 20px 20px 0; /* Adds spacing around the image */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a shadow for emphasis */
 }
-
-#crane-image {
-    width: 200px;
-    height: 200px;       /* Sets both width and height to 200px */
-    object-fit: cover;   /* Crops the image to fill the container */
-    display: block; /* Removes inline spacing issues */
-    margin: 1rem 0; /* Adds spacing around images */
-}
-
 
 @media (max-width: 768px) {
     .skills {
