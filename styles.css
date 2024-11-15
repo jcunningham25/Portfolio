@@ -1,217 +1,87 @@
+/* =========================================================
+   1. CSS Variables
+========================================================= */
 :root {
     --primary-blue: #1e3d59;
     --secondary-blue: #3685b5;
     --light-blue: #bacee2;
     --accent-blue: #0466c8;
+
+    /* Additional Variables */
+    --font-family: 'Segoe UI', system-ui, sans-serif;
+    --transition-speed: 0.3s;
+    --border-radius: 5px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --max-container-width: 1200px;
+    --gap-large: 2rem;
+    --gap-medium: 1rem;
+}
+
+/* =========================================================
+   2. Global Styles
+========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: var(--font-family);
     color: #333;
-    background: linear-gradient(135deg, var(--light-blue) 25%, transparent 25%) -50px 0,
-                linear-gradient(225deg, var(--light-blue) 25%, transparent 25%) -50px 0,
-                linear-gradient(315deg, var(--light-blue) 25%, transparent 25%),
-                linear-gradient(45deg, var(--light-blue) 25%, transparent 25%);
+    background: 
+        linear-gradient(135deg, var(--light-blue) 25%, transparent 25%) -50px 0,
+        linear-gradient(225deg, var(--light-blue) 25%, transparent 25%) -50px 0,
+        linear-gradient(315deg, var(--light-blue) 25%, transparent 25%),
+        linear-gradient(45deg, var(--light-blue) 25%, transparent 25%);
     background-size: 100px 100px;
     background-color: white;
+    line-height: 1.6;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-speed) ease;
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+}
+
+/* =========================================================
+   3. Navigation Bar
+========================================================= */
 nav {
     background-color: var(--primary-blue);
     padding: 1rem;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: var(--gap-large);
 }
 
-nav a {
+nav ul li a {
     color: white;
-    text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color var(--transition-speed) ease;
 }
 
-nav a:hover {
+nav ul li a:hover,
+nav ul li a.active {
     color: var(--light-blue);
 }
 
+/* =========================================================
+   4. Hero Section
+========================================================= */
 .hero {
     background-color: var(--primary-blue);
     color: white;
     padding: 4rem 2rem;
-    text-align: center;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-.section {
-    background: white;
-    border-radius: 8px;
-    padding: 2rem;
-    margin: 2rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-
-.skill-card {
-    background: var(--light-blue);
-    padding: 1rem;
-    border-radius: 4px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    position: relative;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    background-color: var(--secondary-blue);
-    color: white;
-}
-
-.skill-details {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    padding: 1rem;
-    border-radius: 4px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    text-align: left;
-}
-
-.skill-details.hidden {
-    display: none;
-}
-
-.skill-card:hover .skill-details {
-    display: block; /* Show details on hover */
-}
-
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background: white;
-    border: 2px solid var(--secondary-blue);
-    border-radius: 8px;
-    padding: 1.5rem;
-    transition: transform 0.2s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-details-btn {
-    background-color: var(--secondary-blue);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 1rem;
-}
-
-.project-details-btn:hover {
-    background-color: var(--primary-blue);
-}
-
-/* General Image Styling */
-img {
-    width: 400px;
-    height: 400px;       /* Sets both width and height to 200px */
-    object-fit: cover;   /* Crops the image to fill the container */
-    display: block;      /* Removes inline spacing issues */
-    margin: 1rem 0;      /* Adds spacing around images */
-}
-
-/* Square Image Styling */
-.square-image {
-    width: 200px;          /* Adjust as needed */
-    height: 200px;         /* Adjust as needed */
-    object-fit: contain;   /* Changed from 'cover' */
-    background-color: #f0f0f0; /* Optional: Fills empty space */
-    border: 2px solid #000;
-    display: block;
-    margin: 1rem 0;
-    border-radius: 5px;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .square-image {
-        width: 100%;           /* Makes the image responsive */
-        height: auto;          /* Allows height to adjust based on width */
-        max-width: 200px;      /* Prevents the image from becoming too large */
-    }
-}
-
-
-/* Specific Class for Project Images */
-.project-image {
-    width: 100%; /* Makes the image take up the full width of its container */
-    border-radius: 8px; /* Adds rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
-    transition: transform 0.3s ease; /* Adds hover effect */
-}
-
-.project-image:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-/* Hero Section Image Styling */
-.hero img {
-    width: 150px; /* Adjust this size for your hero image */
-    height: auto;
-    border-radius: 50%; /* Makes the image circular */
-    margin: 1rem auto;
-    display: block;
-}
-
-/* Specific Class for About Section Profile Images */
-.profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    float: left;
-    margin: 0 20px 20px 0; /* Adds spacing around the image */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a shadow for emphasis */
-}
-
-@media (max-width: 768px) {
-    .skills {
-        grid-template-columns: 1fr;
-    }
-    
-    .projects {
-        grid-template-columns: 1fr;
-    }
-}
