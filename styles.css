@@ -185,7 +185,7 @@ img {
 
 .crane-image {
     width: 400px;          
-    height: auto;          /* Maintains aspect ratio */
+    height: 400px;          /* Maintains aspect ratio */
     border: 2px solid #000; /* Additional styling */
 }
 
