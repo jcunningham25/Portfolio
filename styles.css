@@ -155,13 +155,14 @@ img {
 
 /* Square Image Styling */
 .square-image {
-    width: 200px;               /* Fixed width */
-    height: 200px;              /* Fixed height to make it square */
-    object-fit: cover;          /* Ensures the image covers the container without distortion */
-    border: 2px solid #000;     /* Optional: Adds a border around the image */
-    display: block;             /* Removes any inline spacing issues */
-    margin: 1rem 0;             /* Adds spacing around the image */
-    border-radius: 5px;         /* Optional: Rounds the corners */
+    width: 200px;          /* Adjust as needed */
+    height: 200px;         /* Adjust as needed */
+    object-fit: contain;   /* Changed from 'cover' */
+    background-color: #f0f0f0; /* Optional: Fills empty space */
+    border: 2px solid #000;
+    display: block;
+    margin: 1rem 0;
+    border-radius: 5px;
 }
 
 /* Responsive Adjustments */
