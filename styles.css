@@ -183,6 +183,12 @@ img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a shadow for emphasis */
 }
 
+.crane-image {
+    width: 400px;          
+    height: auto;          /* Maintains aspect ratio */
+    border: 2px solid #000; /* Additional styling */
+}
+
 
 @media (max-width: 768px) {
     .skills {
