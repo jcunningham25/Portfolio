@@ -1,18 +1,10 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('nav a').forEach(anchor => {
+// Smooth scrolling for internal navigation links
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-
-        if (href.startsWith('#')) {
-            // Internal link
-            e.preventDefault();
-            const section = document.querySelector(href);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-            }
-        } else {
-            // External link
-            // Do nothing; allow default behavior
+        e.preventDefault();
+        const section = document.querySelector(this.getAttribute('href'));
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
         }
     });
 });
