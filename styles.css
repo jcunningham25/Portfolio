@@ -90,6 +90,7 @@ nav a:hover {
 }
 
 .skill-details {
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -104,6 +105,10 @@ nav a:hover {
 
 .skill-details.hidden {
     display: none;
+}
+
+.skill-card:hover .skill-details {
+    display: block; /* Show details on hover */
 }
 
 .projects {
