@@ -155,7 +155,7 @@ img {
 
 /* Specific Class for Project Images */
 .project-image {
-    width: 75%; /* Makes the image take up the full width of its container */
+    width: 100%; /* Makes the image take up the full width of its container */
     border-radius: 8px; /* Adds rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
     transition: transform 0.3s ease; /* Adds hover effect */
