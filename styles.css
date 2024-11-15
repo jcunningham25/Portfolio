@@ -153,6 +153,14 @@ img {
     margin: 1rem 0;      /* Adds spacing around images */
 }
 
+.square-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 1rem 0;
+}
+
 /* Specific Class for Project Images */
 .project-image {
     width: 100%; /* Makes the image take up the full width of its container */
