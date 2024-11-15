@@ -184,7 +184,7 @@ img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a shadow for emphasis */
 }
 
-.crane-image {
+#crane-image {
     width: 200px;
     height: 200px;       /* Sets both width and height to 200px */
     object-fit: cover;   /* Crops the image to fill the container */
