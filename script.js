@@ -1,9 +1,19 @@
 // Smooth scrolling for navigation links
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const section = document.querySelector(this.getAttribute('href'));
-        section.scrollIntoView({ behavior: 'smooth' });
+        const href = this.getAttribute('href');
+
+        if (href.startsWith('#')) {
+            // Internal link
+            e.preventDefault();
+            const section = document.querySelector(href);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            // External link
+            // Do nothing; allow default behavior
+        }
     });
 });
 
