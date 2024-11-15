@@ -139,6 +139,46 @@ nav a:hover {
     background-color: var(--primary-blue);
 }
 
+/* General Image Styling */
+img {
+    max-width: 100%; /* Ensures images scale responsively */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes inline spacing issues */
+    margin: 1rem 0; /* Adds spacing around images */
+}
+
+/* Specific Class for Project Images */
+.project-image {
+    width: 100%; /* Makes the image take up the full width of its container */
+    border-radius: 8px; /* Adds rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    transition: transform 0.3s ease; /* Adds hover effect */
+}
+
+.project-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Hero Section Image Styling */
+.hero img {
+    width: 150px; /* Adjust this size for your hero image */
+    height: auto;
+    border-radius: 50%; /* Makes the image circular */
+    margin: 1rem auto;
+    display: block;
+}
+
+/* Specific Class for About Section Profile Images */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    float: left;
+    margin: 0 20px 20px 0; /* Adds spacing around the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a shadow for emphasis */
+}
+
+
 @media (max-width: 768px) {
     .skills {
         grid-template-columns: 1fr;
