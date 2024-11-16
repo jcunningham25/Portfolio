@@ -149,8 +149,8 @@ nav a:hover {
 
 /* General Image Styling */
 img {
-    width: 400px;
-    height: 400px;       /* Sets both width and height to 200px */
+    width: 800px;
+    height: 800px;       /* Sets both width and height to 800px */
     object-fit: cover;   /* Crops the image to fill the container */
     display: block;      /* Removes inline spacing issues */
     margin: 1rem 0;      /* Adds spacing around images */
@@ -158,9 +158,9 @@ img {
 
 /* Square Image Styling */
 .square-image {
-    width: 200px;          /* Adjust as needed */
-    height: 200px;         /* Adjust as needed */
-    object-fit: contain;   /* Changed from 'cover' */
+    width: 800px;          /* Adjust as needed */
+    height: 800px;         /* Adjust as needed */
+    object-fit: fill;   /* Changed from 'cover' */
     background-color: #f0f0f0; /* Optional: Fills empty space */
     border: 2px solid #000;
     display: block;
