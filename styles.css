@@ -81,12 +81,13 @@ nav a:hover {
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
     position: relative;
+    color: var(--primary-text-color);
 }
 
 .skill-card:hover {
     transform: translateY(-5px);
     background-color: var(--secondary-blue);
-    color: white;
+    color: black;
 }
 
 .skill-details {
@@ -101,6 +102,7 @@ nav a:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 10;
     text-align: left;
+    color: black;
 }
 
 .skill-details.hidden {
@@ -109,6 +111,7 @@ nav a:hover {
 
 .skill-card:hover .skill-details {
     display: block; /* Show details on hover */
+    color: black;
 }
 
 .projects {
