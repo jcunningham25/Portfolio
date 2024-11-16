@@ -95,7 +95,7 @@ nav a:hover {
     top: 100%;
     left: 0;
     right: 0;
-    background: white;
+    background: var(--primary-blue);
     padding: 1rem;
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
