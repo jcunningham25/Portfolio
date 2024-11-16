@@ -156,17 +156,6 @@ img {
     margin: 1rem 0;      /* Adds spacing around images */
 }
 
-/* Square Image Styling */
-.square-image {
-    width: 800px;          /* Adjust as needed */
-    height: 800px;         /* Adjust as needed */
-    object-fit: fill;   /* Changed from 'cover' */
-    background-color: #f0f0f0; /* Optional: Fills empty space */
-    border: 2px solid #000;
-    display: block;
-    margin: 1rem 0;
-    border-radius: 5px;
-}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -180,7 +169,8 @@ img {
 
 /* Specific Class for Project Images */
 .project-image {
-    width: 100%; /* Makes the image take up the full width of its container */
+    width: 1080px;
+    height: 1920px;s    
     border-radius: 8px; /* Adds rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
     transition: transform 0.3s ease; /* Adds hover effect */
