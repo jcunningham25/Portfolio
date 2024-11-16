@@ -87,7 +87,7 @@ nav a:hover {
 .skill-card:hover {
     transform: translateY(-5px);
     background-color: var(--secondary-blue);
-    color: black;
+    color: white;
 }
 
 .skill-details {
@@ -111,7 +111,7 @@ nav a:hover {
 
 .skill-card:hover .skill-details {
     display: block; /* Show details on hover */
-    color: black;
+    color: white;
 }
 
 .projects {
